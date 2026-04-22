@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import tours from '../data/tours.json';
 import testimonials from '../data/testimonials.json';
 
-const whatsappUrl = "https://wa.me/261340000000";
+const whatsappUrl = "https://wa.me/261329008907";
 const whatsappText = encodeURIComponent("Hello! I'm interested in booking a tour with Nosy Be Tours.");
 ---
 
@@ -40,8 +40,9 @@ const whatsappText = encodeURIComponent("Hello! I'm interested in booking a tour
         <h2 class="section-title">Your Local Guides<br />in Nosy Be</h2>
         <p>
           We are a small, passionate team of local guides born and raised in the Nosy Be archipelago.
-          With deep knowledge of Madagascar's unique ecosystems, culture, and hidden corners, we craft
-          authentic experiences that go far beyond the tourist trail.
+          Led by Davidson, our founder and head guide, we craft authentic experiences that go far
+          beyond the tourist trail, drawing on deep knowledge of Madagascar's unique ecosystems,
+          culture, and hidden corners.
         </p>
         <p>
           From the fragrant vanilla and cocoa plantations of the mainland to the baobab-studded
@@ -181,7 +182,7 @@ const whatsappText = encodeURIComponent("Hello! I'm interested in booking a tour
           <div class="contact-info">
             <h3>WhatsApp</h3>
             <p>Chat with us instantly</p>
-            <span class="contact-link-text">+261 34 000 0000 →</span>
+            <span class="contact-link-text">+261 32 90 089 07 →</span>
           </div>
         </a>
 
@@ -204,7 +205,7 @@ const whatsappText = encodeURIComponent("Hello! I'm interested in booking a tour
         </a>
 
         <a
-          href="https://maps.google.com/?cid=PLACEHOLDER"
+          href="https://share.google/Zy1xBU7QDGoZjFnXh"
           target="_blank"
           rel="noopener noreferrer"
           class="contact-card contact-card--google"
@@ -218,6 +219,24 @@ const whatsappText = encodeURIComponent("Hello! I'm interested in booking a tour
             <h3>Google Business</h3>
             <p>Read our reviews</p>
             <span class="contact-link-text">Find us on Google →</span>
+          </div>
+        </a>
+
+        <a
+          href="https://www.tripadvisor.fr/Attraction_Review-g635737-d34283424-Reviews-MADA_INFINITY_TOUR-Nosy_Komba_Antsiranana_Province.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-card contact-card--tripadvisor"
+        >
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32" aria-hidden="true">
+              <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 2c4.418 0 8 3.582 8 8s-3.582 8-8 8-8-3.582-8-8 3.582-8 8-8zm-4.5 4a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm9 0a3.5 3.5 0 100 7 3.5 3.5 0 000-7zM7.5 9.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm9 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3z"/>
+            </svg>
+          </div>
+          <div class="contact-info">
+            <h3>TripAdvisor</h3>
+            <p>Read traveller reviews</p>
+            <span class="contact-link-text">MADA INFINITY TOUR →</span>
           </div>
         </a>
       </div>
@@ -622,6 +641,16 @@ const whatsappText = encodeURIComponent("Hello! I'm interested in booking a tour
 
   .contact-card--google:hover {
     background: #ffe8e4;
+  }
+
+  .contact-card--tripadvisor {
+    background: #f0faf4;
+    border-color: #34e0a1;
+    color: #004c3f;
+  }
+
+  .contact-card--tripadvisor:hover {
+    background: #daf5ea;
   }
 
   .contact-icon {
