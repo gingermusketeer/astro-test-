@@ -2,6 +2,8 @@
 
 ## Taking a Screenshot
 
+The site uses Astro SSR with the Cloudflare Workers adapter, so `dist/client/` only contains static assets (CSS, JS, images) — not HTML. Use `wrangler dev` pointed at the generated config to run the worker locally.
+
 To capture a screenshot of the site for verification or documentation:
 
 1. **Build the site** (if not already built):
@@ -9,9 +11,9 @@ To capture a screenshot of the site for verification or documentation:
    npm run build
    ```
 
-2. **Start a local HTTP server** on the built output:
+2. **Start a local Cloudflare Workers dev server** from the project root:
    ```bash
-   cd dist && python3 -m http.server 4321 --bind 127.0.0.1 &
+   npx wrangler dev --config dist/server/wrangler.json --port 4321 &
    ```
 
 3. **Navigate to the site** in the Playwright browser tool:
@@ -34,3 +36,17 @@ To capture a screenshot of the site for verification or documentation:
    ```
 
 > **Note:** `localhost` may be blocked by the browser sandbox — always use `127.0.0.1` as the hostname.
+> Run `wrangler dev` from the **project root** (not from `dist/server/`). Running from `dist/server/` causes a path conflict with `.wrangler/deploy/config.json`.
+
+## Deploying to Cloudflare
+
+The site is deployed as a Cloudflare Worker. The `wrangler.toml` at the project root configures the worker name and enables observability logging.
+
+To deploy:
+```bash
+npm run deploy
+```
+
+This runs `astro build` followed by `wrangler deploy`, which uploads the built worker from `dist/server/` to Cloudflare using the generated `dist/server/wrangler.json`.
+
+> **Note:** `wrangler deploy` requires you to be authenticated (`npx wrangler login`) and have a Cloudflare account with Workers access.
