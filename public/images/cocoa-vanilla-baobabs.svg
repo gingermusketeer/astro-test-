@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#2d5a27"/>
+  <!-- Sky gradient -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#87ceeb"/>
+      <stop offset="100%" stop-color="#b8e4f9"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4a7c59"/>
+      <stop offset="100%" stop-color="#2d5a27"/>
+    </linearGradient>
+  </defs>
+  <!-- Sky -->
+  <rect width="800" height="320" fill="url(#sky)"/>
+  <!-- Ground -->
+  <rect y="320" width="800" height="180" fill="url(#ground)"/>
+  <!-- Sun -->
+  <circle cx="680" cy="80" r="50" fill="#f5c542" opacity="0.85"/>
+  <!-- Baobab trunk (wide at top) -->
+  <path d="M390 310 Q395 250 385 200 Q380 170 400 150 Q420 170 415 200 Q405 250 410 310 Z" fill="#8b5e3c"/>
+  <!-- Baobab branches -->
+  <line x1="400" y1="160" x2="350" y2="120" stroke="#8b5e3c" stroke-width="10"/>
+  <line x1="400" y1="155" x2="450" y2="115" stroke="#8b5e3c" stroke-width="10"/>
+  <line x1="395" y1="170" x2="360" y2="145" stroke="#8b5e3c" stroke-width="8"/>
+  <line x1="405" y1="165" x2="440" y2="140" stroke="#8b5e3c" stroke-width="8"/>
+  <!-- Baobab foliage clusters -->
+  <ellipse cx="350" cy="110" rx="35" ry="25" fill="#2d7a3a"/>
+  <ellipse cx="450" cy="105" rx="35" ry="25" fill="#2d7a3a"/>
+  <ellipse cx="395" cy="145" rx="28" ry="18" fill="#3a9a4a"/>
+  <ellipse cx="362" cy="135" rx="22" ry="16" fill="#3a9a4a"/>
+  <ellipse cx="442" cy="130" rx="22" ry="16" fill="#3a9a4a"/>
+  <!-- Vanilla plant (left) -->
+  <path d="M200 310 Q205 280 195 250 Q190 230 205 220" stroke="#5a8a2a" stroke-width="4" fill="none"/>
+  <ellipse cx="205" cy="215" rx="12" ry="20" fill="#7ab840" transform="rotate(-20 205 215)"/>
+  <ellipse cx="195" cy="255" rx="10" ry="18" fill="#7ab840" transform="rotate(15 195 255)"/>
+  <ellipse cx="208" cy="275" rx="10" ry="18" fill="#7ab840" transform="rotate(-10 208 275)"/>
+  <!-- Vanilla pods -->
+  <line x1="205" y1="215" x2="220" y2="200" stroke="#c8973f" stroke-width="3"/>
+  <line x1="205" y1="215" x2="218" y2="205" stroke="#c8973f" stroke-width="2"/>
+  <!-- Cocoa tree (right) -->
+  <rect x="570" y="230" width="20" height="80" fill="#8b5e3c"/>
+  <ellipse cx="580" cy="220" rx="50" ry="40" fill="#2d7a3a"/>
+  <ellipse cx="560" cy="235" rx="35" ry="25" fill="#3a9a4a"/>
+  <ellipse cx="600" cy="232" rx="35" ry="25" fill="#3a9a4a"/>
+  <!-- Cocoa pods on trunk -->
+  <ellipse cx="575" cy="255" rx="12" ry="18" fill="#c8641a" transform="rotate(15 575 255)"/>
+  <ellipse cx="593" cy="268" rx="12" ry="18" fill="#d4741a" transform="rotate(-10 593 268)"/>
+  <ellipse cx="562" cy="272" rx="11" ry="16" fill="#b85c15" transform="rotate(5 562 272)"/>
+  <!-- Rolling hills in background -->
+  <ellipse cx="150" cy="330" rx="200" ry="60" fill="#3d6e48" opacity="0.7"/>
+  <ellipse cx="680" cy="325" rx="200" ry="55" fill="#3d6e48" opacity="0.7"/>
+  <!-- Text label -->
+  <rect x="160" y="420" width="480" height="55" rx="8" fill="rgba(0,0,0,0.45)"/>
+  <text x="400" y="448" font-family="Georgia, serif" font-size="20" font-weight="bold" text-anchor="middle" fill="white">Cocoa, Vanilla and Baobabs</text>
+  <text x="400" y="468" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="rgba(255,255,255,0.8)">Nosy Be, Madagascar</text>
+</svg>
