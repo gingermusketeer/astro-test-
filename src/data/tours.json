@@ -1,0 +1,11 @@
+[
+  {
+    "id": "cocoa-vanilla-baobabs",
+    "title": "Cocoa, vanilla and baobabs",
+    "images": ["https://picsum.photos/seed/baobab/800/500"],
+    "description": "Discover the rich flavours of Madagascar on this immersive day tour. Visit working cocoa and vanilla plantations, taste fresh spices straight from the source, and marvel at ancient baobab trees that have stood for centuries. A feast for all the senses.",
+    "price": 95,
+    "startLocation": "Nosy Be Port",
+    "endLocation": "Nosy Be Port"
+  }
+]

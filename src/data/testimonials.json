@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Sarah & James",
+    "country": "United Kingdom",
+    "text": "Absolutely magical experience! Our guide was incredibly knowledgeable about the local flora and the vanilla plantation was breathtaking. The baobabs were unlike anything we'd ever seen.",
+    "rating": 5
+  },
+  {
+    "id": 2,
+    "name": "Marie-Claire",
+    "country": "France",
+    "text": "Une expérience inoubliable! Le tour de cacao et vanille était parfait — des paysages magnifiques et un guide passionné. Je recommande vivement.",
+    "rating": 5
+  },
+  {
+    "id": 3,
+    "name": "Thomas B.",
+    "country": "Germany",
+    "text": "Perfect organisation, stunning landscapes, and the freshest vanilla I have ever tasted. Will definitely book again next time we're in Madagascar!",
+    "rating": 5
+  },
+  {
+    "id": 4,
+    "name": "Amelia R.",
+    "country": "Australia",
+    "text": "The baobab sunset was the highlight of our entire Madagascar trip. Our guide knew every tree by name. An unforgettable afternoon.",
+    "rating": 5
+  }
+]
