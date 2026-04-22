@@ -1,0 +1,11 @@
+[
+  {
+    "id": "cocoa-vanilla-baobabs",
+    "title": "Cacao, vanille et baobabs",
+    "images": ["/images/cocoa-vanilla-baobabs.svg"],
+    "description": "Découvrez les saveurs riches de Madagascar lors de cette excursion immersive d'une journée. Visitez des plantations de cacao et de vanille en activité, dégustez des épices fraîches directement à la source, et émerveillez-vous devant des baobabs ancestraux qui se dressent depuis des siècles. Un festin pour tous les sens.",
+    "price": 95,
+    "startLocation": "Port de Nosy Be",
+    "endLocation": "Port de Nosy Be"
+  }
+]
