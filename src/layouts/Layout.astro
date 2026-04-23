@@ -1,19 +1,36 @@
 ---
+import type { Translations, Locale } from '../i18n/translations';
+
 interface Props {
   title: string;
   description?: string;
+  lang?: Locale;
+  t: Translations;
 }
 
-const { title, description = "Mada Infinity Tours — Expert-guided tours in Madagascar's Nosy Be region. Explore spice plantations, baobab forests, and pristine beaches." } = Astro.props;
+const {
+  title,
+  description,
+  lang = 'en',
+  t,
+} = Astro.props;
+
+const origin = Astro.url.origin;
+const altLang = lang === 'en' ? 'fr' : 'en';
+const altHref = lang === 'en' ? '/fr/' : '/';
+const altLabel = lang === 'en' ? 'FR' : 'EN';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={description} />
+    <meta name="description" content={description ?? t.meta.description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate" hreflang="en" href={`${origin}/`} />
+    <link rel="alternate" hreflang="fr" href={`${origin}/fr/`} />
+    <link rel="alternate" hreflang="x-default" href={`${origin}/`} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -22,12 +39,17 @@ const { title, description = "Mada Infinity Tours — Expert-guided tours in Mad
   <body>
     <header class="site-header">
       <nav class="nav container">
-        <a href="/" class="logo">🌴 Mada Infinity Tours</a>
+        <a href={lang === 'en' ? '/' : '/fr/'} class="logo">🌴 Mada Infinity Tours</a>
         <ul class="nav-links">
-          <li><a href="#tours">Tours</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#testimonials">Reviews</a></li>
-          <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+          <li><a href="#tours">{t.nav.tours}</a></li>
+          <li><a href="#about">{t.nav.about}</a></li>
+          <li><a href="#testimonials">{t.nav.reviews}</a></li>
+          <li><a href="#contact" class="nav-cta">{t.nav.contact}</a></li>
+          <li>
+            <a href={altHref} class="lang-switch" aria-label={`Switch to ${altLang === 'en' ? 'English' : 'French'}`}>
+              {altLabel}
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -39,8 +61,8 @@ const { title, description = "Mada Infinity Tours — Expert-guided tours in Mad
     <footer class="site-footer">
       <div class="container">
         <p class="footer-logo">🌴 Mada Infinity Tours</p>
-        <p>Based in Nosy Be, Madagascar &mdash; Your gateway to island adventures</p>
-        <p class="footer-copy">&copy; {new Date().getFullYear()} Mada Infinity Tours. All rights reserved.</p>
+        <p>{t.footer.tagline}</p>
+        <p class="footer-copy">&copy; {new Date().getFullYear()} Mada Infinity Tours. {t.footer.rights}</p>
       </div>
     </footer>
   </body>
@@ -159,6 +181,26 @@ const { title, description = "Mada Infinity Tours — Expert-guided tours in Mad
 
   .nav-cta:hover {
     background: var(--color-green-dark) !important;
+  }
+
+  .lang-switch {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 2px solid var(--color-green);
+    color: var(--color-green) !important;
+    font-size: 0.75rem;
+    font-weight: 700 !important;
+    letter-spacing: 0.02em;
+    transition: background 0.2s, color 0.2s !important;
+  }
+
+  .lang-switch:hover {
+    background: var(--color-green);
+    color: var(--color-white) !important;
   }
 
   /* FOOTER */

@@ -1,0 +1,13 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageContent from '../../components/PageContent.astro';
+import { fr } from '../../i18n/translations';
+import tours from '../../data/tours.fr.json';
+import testimonials from '../../data/testimonials.json';
+
+const t = fr;
+---
+
+<Layout title={t.meta.title} description={t.meta.description} lang="fr" t={t}>
+  <PageContent t={t} tours={tours} testimonials={testimonials} lang="fr" />
+</Layout>
